@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from  "./components/Header";
+import Home from  "./components/Home";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import { WalletContextProvider } from "./components/WalletContext";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <WalletContextProvider>
+      <Container>
+        <Row><Header /></Row>
+        <Home />
+      </Container>
+      <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false} newestOnTop closeOnClick pauseOnFocusLoss draggable pauseOnHover />
+    </WalletContextProvider>
   );
 }
 
