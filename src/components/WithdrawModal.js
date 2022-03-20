@@ -59,6 +59,8 @@ function WithdrawModal(props) {
         { ratios.map((ratio, i) => <tr><td>{i+1}</td><td>{getTokenName(ratio.token)}</td><td>{ (!strategy.isDue) ? <span className="text-danger">{ ethers.utils.formatUnits(ratio.value.div(2).toString()) }</span> : ethers.utils.formatUnits(ratio.value.toString())}</td></tr>) }
         </tbody>
       </Table>
+
+      { (strategy.isDue) ? <span className="text-success">You will receive approx. {strategy.bonus} HBNK as a reward</span> : "" }
     </Modal.Body>
     <Modal.Footer>
       <Button variant="secondary" disabled={isLoading} onClick={handleClose}>

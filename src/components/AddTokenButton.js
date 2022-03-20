@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
+import Addresses from '../models/addresses';
 
 
 function AddTokenButton() {
-    const tokenAddress = '0x4E8137a8B6Dd3Ef64553AFf211ebf323CeF2C9D8';
+    const tokenAddress = Addresses.token;
     const tokenSymbol = 'HBNK';
     const tokenDecimals = 18;
     const tokenImage = 'https://i.ibb.co/1KfD9HP/Screenshot-2022-03-20-at-10-52-22-AM.png';

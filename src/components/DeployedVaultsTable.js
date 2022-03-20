@@ -3,9 +3,8 @@ import { defaultTokens } from '../models/defaultTokens';
 import { ethers } from 'ethers';
 import moment from 'moment';
 
-function DeployedVaults(props) {
+function DeployedVaultsTable(props) {
   const vaults = props.vaults;
-console.log(vaults);
   const loading = props.loading;
 
   const withdrawCallback = props.withdrawCallback;
@@ -84,4 +83,4 @@ console.log(vaults);
   );
 }
 
-export default DeployedVaults;
+export default DeployedVaultsTable;
